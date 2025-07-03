@@ -430,4 +430,21 @@ export default function handleHeader() {
       <!-- End Body menu -->
     </div>`;
   }
+
+  //User account
+  function userAccount() {
+    const userIcon = document.querySelector(".userIcon");
+    const userBlock = document.querySelector(".userBlock");
+
+    userIcon.addEventListener("mouseenter", () => {
+      userBlock.classList.replace("lg:top-40", "lg:top-11");
+      userBlock.classList.replace("lg:opacity-0", "lg:opacity-100");
+    });
+    userBlock.addEventListener("mouseleave", () => {
+      userBlock.classList.replace("lg:top-11", "lg:top-40");
+      userBlock.classList.replace("lg:opacity-100", "lg:opacity-0");
+    });
+  }
+
+  userAccount();
 }

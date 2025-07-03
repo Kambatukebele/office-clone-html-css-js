@@ -101,7 +101,7 @@
           </div>
           <!-- End Icons -->
           <!-- Hamburger icon -->
-          <div class="block border xl:hidden">
+          <div class="block cursor-pointer xl:hidden">
             <span class="block w-7 h-7 hamburger">
               <img
                 class="block w-7 h-7"
@@ -116,7 +116,7 @@
       </nav>
       <!-------------------------- Menu navigation on small device --------------------------->
       <div
-        class="h-screen bg-white z-10 w-full absolute top-0 -right-0 translate-x-[1300px] opacity-0 duration-700 ease-in-out flex-col justify-between navigationOnSmallDevice xl:hidden"
+        class="h-screen bg-white z-10 w-full absolute top-0 -right-0 translate-x-[1300px] opacity-0 duration-300 ease-in-out flex-col justify-between mobileMenu xl:hidden"
       >
         <!-- Head -->
         <div class="px-4 h-[8rem]">
@@ -134,7 +134,7 @@
             </div>
             <!-- End Logo -->
             <!-- close icon -->
-            <span class="block w-7 h-7 closeHamburger">
+            <span class="block w-7 h-7 cursor-pointer closeHamburger">
               <img
                 class="w-7 h-7"
                 src="./src/svgs/close.svg"
@@ -150,14 +150,14 @@
               class="border bg-gray-200 border-gray-50 w-10 h-10 flex justify-center items-center"
             >
               <img
-                class="w-7 h-7"
+                class="w-5 h-5"
                 src="./src/svgs/search.svg"
                 alt="search icon"
               />
             </span>
             <span class="block">
               <input
-                class="text-sm h-12 border-none outline-none bg-transparent"
+                class="text-xs h-12 border-none outline-none bg-transparent sm:text-sm"
                 type="search"
                 placeholder="Search for products and brands..."
               />
@@ -167,8 +167,10 @@
         </div>
         <!-- End Head -->
         <!-- Body menu -->
-        <ul class="block px-4 h-[calc(100vh-18.625rem)] overflow-y-scroll">
-          <li
+        <ul
+          class="mobileMenuUl block px-4 h-[calc(100vh-18.625rem)] overflow-y-scroll"
+        >
+          <!-- <li
             class="flex justify-between items-center h-[4.375rem] border-b border-gray-200"
           >
             <span class="text-base block font-medium uppercase">New in</span>
@@ -179,71 +181,7 @@
                 alt="Chevron right icon"
               />
             </span>
-          </li>
-          <!-- Sub menu -->
-          <div class="subMenu hidden">
-            <!-- Sub menu head -->
-            <div
-              class="h-16 flex justify-start gap-32 items-center border-y border-gray-200"
-            >
-              <span class="block">
-                <img
-                  class="w-11 h-11"
-                  src="./src/svgs/chevron-left.svg"
-                  alt="chevron-left"
-                />
-              </span>
-              <span class="text-base block font-medium uppercase">Woman</span>
-            </div>
-            <!-- End Sub menu head -->
-            <!-- Sub menu body -->
-            <div>
-              <span
-                class="h-[4.375rem] border-b border-gray-200 flex justify-start items-center"
-              >
-                <a class="block text-lg font-medium uppercase" href="#"
-                  >Shoes</a
-                >
-              </span>
-              <span
-                class="h-[4.375rem] border-b border-gray-200 flex justify-start items-center"
-              >
-                <a class="block text-lg font-medium uppercase" href="#"
-                  >Shoes</a
-                >
-              </span>
-              <span
-                class="h-[4.375rem] border-b border-gray-200 flex justify-start items-center"
-              >
-                <a class="block text-lg font-medium uppercase" href="#"
-                  >Shoes</a
-                >
-              </span>
-              <span
-                class="h-[4.375rem] border-b border-gray-200 flex justify-start items-center"
-              >
-                <a class="block text-lg font-medium uppercase" href="#"
-                  >Shoes</a
-                >
-              </span>
-              <span
-                class="h-[4.375rem] border-b border-gray-200 flex justify-start items-center"
-              >
-                <a class="block text-lg font-medium uppercase" href="#"
-                  >Shoes</a
-                >
-              </span>
-              <span
-                class="h-[4.375rem] border-b border-gray-200 flex justify-start items-center"
-              >
-                <a class="block text-lg font-medium uppercase" href="#"
-                  >Shoes</a
-                >
-              </span>
-            </div>
-            <!-- End Sub menu body -->
-          </div>
-          <!-- End Sub menu -->
+          </li> -->
         </ul>
         <!-- End Body menu -->
         <!-- Foot -->
@@ -266,6 +204,11 @@
         <!-- End Foot -->
       </div>
       <!---------------------- End Menu navigation on small device -------------------------->
+      <!-------------------------- SubMenuComponent --------------------------->
+      <div
+        class="subMenuComponentClass z-10 w-full absolute top-0 -right-0 translate-x-[1300px] opacity-0 duration-500 ease-in-out"
+      ></div>
+      <!-------------------------- SubMenuComponent --------------------------->
     </header>
     <!-- End Header -->
 

@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End Google font -->
+    <title>Shoes, Boots & Footwear</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- End Header -->
+    <!-- Announcement-image -->
+    <picture class="w-full h-fit">
+      <source
+        class="w-full h-full object-cover object-center"
+        media="(min-width: 768px)"
+        srcset="./src/images/announcement-image.jpeg"
+        alt="Large Annoucement image"
+      />
+      <img
+        class="w-full h-full object-cover object-center"
+        src="./src/images/small-announcement-image.jpeg"
+        alt="Small Annoucement image"
+      />
+    </picture>
+    <!-- End Announcement-image -->
+    <!-- Text and Description -->
+    <section class="w-full">
+      <div class="container mx-auto">
+        <div
+          class="w-full flex flex-col justify-center items-center gap-4 py-10"
+        >
+          <h1
+            class="w-full text-center text-2xl font-medium sm:text-4xl lg:text-[40px]"
+          >
+            Kids
+          </h1>
+          <p
+            class="w-full text-center text-xs font-normal line-clamp-1 sm:line-clamp-none"
+          >
+            Add some fun into their footwear collection with the latest kids’
+            shoes on the block at OFFICE. From back-to-school staples to
+            summer-holiday must-haves, shop trainers, boots, sandals and shoes
+            for boys and girls in playful designs they’ll daydream about.
+          </p>
+          <div
+            class="hidden sm:w-full sm:flex sm:justify-center sm:items-center sm:gap-4 sm:py-5"
+          >
+            <a class="text-sm font-normal" href="#">Trainers</a> |
+            <a class="text-sm font-normal" href="#">Boots</a> |
+            <a class="text-sm font-normal" href="#">Sandals</a> |
+            <a class="text-sm font-normal" href="#">Wellies</a> |
+            <a class="text-sm font-normal" href="#">Shoes</a>
+          </div>
+          <div
+            class="hidden sm:w-full sm:flex sm:justify-center sm:items-center sm:gap-4 sm:py-5"
+          >
+            <a class="text-sm font-normal" href="#">Trainers</a> |
+            <a class="text-sm font-normal" href="#">Boots</a> |
+            <a class="text-sm font-normal" href="#">Sandals</a> |
+            <a class="text-sm font-normal" href="#">Wellies</a> |
+            <a class="text-sm font-normal" href="#">Shoes</a>
+          </div>
+        </div>
+        <!-- Filters -->
+        <section class="py-5 w-full">
+          <!-- on small device -->
+          <div class="w-full flex justify-between items-center py-10 lg:hidden">
+            <div class="w-full">
+              <button
+                id="sort-bySmall"
+                class="px-5 py-2 border border-gray-200 rounded-sm cursor-pointer text-sm lg:hidden"
+              >
+                Sort by
+              </button>
+              <!-- Hidden Sortby on small screen -->
+              <div
+                id="sort-bySmallBlock"
+                class="w-full absolute top-0 right-0 left-0 z-30 bg-gray-50 h-0 overflow-hidden duration-700 ease-in-out transition-discrete"
+              >
+                <div
+                  class="bg-orange-200 w-full flex justify-between items-center rounded-sm cursor-pointer text-white h-16 px-4"
+                >
+                  <span class="text-sm font-normal text-gray-800">Sort by</span>
+                  <span id="sort-bySmallCloseIcon" class="w-4 h-4 block">
+                    <img
+                      class="w-full h-full object-cover object-center block overflow-hidden"
+                      src="./src/svgs/close.svg"
+                      alt="close icon"
+                    />
+                  </span>
+                </div>
+                <div
+                  class="w-full px-4 flex flex-col justify-center items-start py-10 gap-3"
+                >
+                  <span
+                    class="lg:flex lg:justify-start lg:items-center lg:gap-2"
+                  >
+                    <input type="radio" />
+                    <label class="lg:text-xs lg:font-normal">Recommended</label>
+                  </span>
+                  <span
+                    class="lg:flex lg:justify-start lg:items-center lg:gap-2"
+                  >
+                    <input type="radio" />
+                    <label class="lg:text-xs lg:font-normal">What's New</label>
+                  </span>
+                  <span
+                    class="lg:flex lg:justify-start lg:items-center lg:gap-2"
+                  >
+                    <input type="radio" />
+                    <label class="lg:text-xs lg:font-normal"
+                      >Price (High - Low)</label
+                    >
+                  </span>
+                  <span
+                    class="lg:flex lg:justify-start lg:items-center lg:gap-2"
+                  >
+                    <input type="radio" />
+                    <label class="lg:text-xs lg:font-normal"
+                      >Price (Low - High)</label
+                    >
+                  </span>
+                  <span
+                    class="lg:flex lg:justify-start lg:items-center lg:gap-2"
+                  >
+                    <input type="radio" />
+                    <label class="lg:text-xs lg:font-normal"
+                      >Brand (a - z)</label
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+            <span class="w-full text-xs font-normal text-center lg:hidden"
+              >287 items</span
+            >
+            <!-- Filter on small device -->
+            <div>
+              <button
+                id="filterSmall"
+                class="px-5 py-2 border border-gray-200 rounded-sm cursor-pointer text-sm lg:hidden"
+              >
+                Filter
+              </button>
+              <!-- FIlter block on small device -->
+              <div
+                id="filterSmallBlock"
+                class="w-full absolute h-0 overflow-hidden top-0 right-0 left-0 z-30 duration-700 bg-gray-50 ease-in-out transition-discrete"
+              >
+                <div
+                  class="bg-orange-200 w-full flex justify-between items-center rounded-sm cursor-pointer text-white h-16 px-4"
+                >
+                  <span class="text-sm font-normal text-gray-800"
+                    >Filter by</span
+                  >
+                  <span id="filterSmallCloseIcon" class="w-4 h-4 block">
+                    <img
+                      class="w-full h-full object-cover object-center block overflow-hidden"
+                      src="./src/svgs/close.svg"
+                      alt="close icon"
+                    />
+                  </span>
+                </div>
+                <div
+                  class="w-full px-4 flex flex-col justify-center items-start py-10 gap-3"
+                >
+                  <div
+                    class="w-full flex justify-between items-center border-b border-gray-400 pb-3"
+                  >
+                    <span class="text-xs font-normal text-gray-600"
+                      >Selected (0)</span
+                    >
+                    <span class="text-xs font-normal text-gray-600"
+                      >clear all</span
+                    >
+                  </div>
+                  <div class="w-full">
+                    <!-- Filter card -->
+                    <div class="w-full filterCard">
+                      <!-- Header filter card -->
+                      <div
+                        class="w-full flex justify-between items-center py-4 border-b border-gray-100"
+                      >
+                        <span class="text-sm font-normal block text-gray-800"
+                          >Shoe type</span
+                        >
+                        <div class="w-fit">
+                          <span class="w-4 h-4 block">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/plus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                          <span class="w-4 h-4 hidden">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/minus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Body filter card -->
+                      <div
+                        class="w-full flex-col justify-center items-center gap-3 h-fit hidden my-5"
+                      >
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="w-full filterCard">
+                      <!-- Header filter card -->
+                      <div
+                        class="w-full flex justify-between items-center py-4 border-b border-gray-100"
+                      >
+                        <span class="text-sm font-normal block text-gray-800"
+                          >Shoe type</span
+                        >
+                        <div class="w-fit">
+                          <span class="w-4 h-4 block">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/plus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                          <span class="w-4 h-4 hidden">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/minus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Body filter card -->
+                      <div
+                        class="w-full flex-col justify-center items-center gap-3 h-fit hidden my-5"
+                      >
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="w-full filterCard">
+                      <!-- Header filter card -->
+                      <div
+                        class="w-full flex justify-between items-center py-4 border-b border-gray-100"
+                      >
+                        <span class="text-sm font-normal block text-gray-800"
+                          >Shoe type</span
+                        >
+                        <div class="w-fit">
+                          <span class="w-4 h-4 block">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/plus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                          <span class="w-4 h-4 hidden">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/minus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Body filter card -->
+                      <div
+                        class="w-full flex-col justify-center items-center gap-3 h-fit hidden my-5"
+                      >
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="w-full filterCard">
+                      <!-- Header filter card -->
+                      <div
+                        class="w-full flex justify-between items-center py-4 border-b border-gray-100"
+                      >
+                        <span class="text-sm font-normal block text-gray-800"
+                          >Shoe type</span
+                        >
+                        <div class="w-fit">
+                          <span class="w-4 h-4 block">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/plus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                          <span class="w-4 h-4 hidden">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/minus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Body filter card -->
+                      <div
+                        class="w-full flex-col justify-center items-center gap-3 h-fit hidden my-5"
+                      >
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="w-full filterCard">
+                      <!-- Header filter card -->
+                      <div
+                        class="w-full flex justify-between items-center py-4 border-b border-gray-100"
+                      >
+                        <span class="text-sm font-normal block text-gray-800"
+                          >Shoe type</span
+                        >
+                        <div class="w-fit">
+                          <span class="w-4 h-4 block">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/plus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                          <span class="w-4 h-4 hidden">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/minus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Body filter card -->
+                      <div
+                        class="w-full flex-col justify-center items-center gap-3 h-fit hidden my-5"
+                      >
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="w-full filterCard">
+                      <!-- Header filter card -->
+                      <div
+                        class="w-full flex justify-between items-center py-4 border-b border-gray-100"
+                      >
+                        <span class="text-sm font-normal block text-gray-800"
+                          >Shoe type</span
+                        >
+                        <div class="w-fit">
+                          <span class="w-4 h-4 block">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/plus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                          <span class="w-4 h-4 hidden">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/minus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Body filter card -->
+                      <div
+                        class="w-full flex-col justify-center items-center gap-3 h-fit hidden my-5"
+                      >
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="w-full filterCard">
+                      <!-- Header filter card -->
+                      <div
+                        class="w-full flex justify-between items-center py-4 border-b border-gray-100"
+                      >
+                        <span class="text-sm font-normal block text-gray-800"
+                          >Shoe type</span
+                        >
+                        <div class="w-fit">
+                          <span class="w-4 h-4 block">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/plus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                          <span class="w-4 h-4 hidden">
+                            <img
+                              class="w-full h-full object-cover object-center block overflow-hidden"
+                              src="./src/svgs/minus.svg"
+                              alt="plus icon"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Body filter card -->
+                      <div
+                        class="w-full flex-col justify-center items-center gap-3 h-fit hidden my-5"
+                      >
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                        <span
+                          class="w-full flex justify-start items-center gap-4"
+                        >
+                          <input type="radio" name="shoe-type" id="" />
+                          <label
+                            class="text-xs font-normal text-gray-800"
+                            for=""
+                            >Shoe type</label
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Apply btn -->
+                <div class="px-4">
+                  <button class="w-full py-3 bg-blue-700 text-white rounded-sm">
+                    Apply
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End on small device -->
+          <!-- on larger device -->
+          <div
+            class="hidden lg:flex lg:justify-between lg:items-center lg:gap-4"
+          >
+            <div class="lg:w-full lg:flex lg:justify-start lg:items-center">
+              <span class="lg:w-4 lg:h-4 lg:block">
+                <img
+                  class="lg:w-full lg:h-full lg:object-center lg:object-cover lg:block"
+                  src="./src/svgs/chevron-right.svg"
+                  alt="chevron-right"
+                />
+              </span>
+              <span class="lg:text-xs lg:font-medium">Show filters</span>
+            </div>
+            <div
+              class="lg:w-full lg:flex lg:justify-center lg:items-center lg:gap-2"
+            >
+              <span class="lg:text-xs lg:font-normal lg:block">Home</span>
+              <span class=""> > </span>
+              <span class="lg:text-xs lg:font-normal lg:block">Womens</span>
+              <span> > </span>
+              <a class="lg:text-xs lg:font-semibold lg:block" href="#"
+                >Festival Shoes</a
+              >
+            </div>
+            <!-- Sort by -->
+            <div id="sort-by" class="lg:w-full lg:relative">
+              <div class="lg:w-full lg:flex lg:justify-end lg:items-center">
+                <span
+                  class="lg:w-4 lg:h-4 lg:block lg:rotate-0 lg:duration-500 lg:ease-in-out lg:transition-transform"
+                >
+                  <img
+                    class="lg:w-full lg:h-full lg:object-center lg:object-cover lg:block"
+                    src="./src/svgs/chevron-right.svg"
+                    alt="chevron-right"
+                  />
+                </span>
+                <span class="lg:text-xs lg:font-medium"
+                  >Sort by: Recommended</span
+                >
+              </div>
+              <!-- Sort by block  -->
+              <div
+                class="lg:absolute lg:top-5 lg:z-20 lg:right-0 lg:flex lg:h-0 lg:overflow-hidden lg:opacity-0 lg:px-6 lg:bg-white lg:shadow-2xl lg:w-fit lg:rounded-sm lg:flex-col lg:justify-center lg:gap-3 lg:border lg:border-gray-100 lg:duration-700 lg:ease-in-out transition-discrete"
+              >
+                <span class="lg:flex lg:justify-start lg:items-center lg:gap-2">
+                  <input type="radio" />
+                  <label class="lg:text-xs lg:font-normal">Recommended</label>
+                </span>
+                <span class="lg:flex lg:justify-start lg:items-center lg:gap-2">
+                  <input type="radio" />
+                  <label class="lg:text-xs lg:font-normal">What's New</label>
+                </span>
+                <span class="lg:flex lg:justify-start lg:items-center lg:gap-2">
+                  <input type="radio" />
+                  <label class="lg:text-xs lg:font-normal"
+                    >Price (High - Low)</label
+                  >
+                </span>
+                <span class="lg:flex lg:justify-start lg:items-center lg:gap-2">
+                  <input type="radio" />
+                  <label class="lg:text-xs lg:font-normal"
+                    >Price (Low - High)</label
+                  >
+                </span>
+                <span class="lg:flex lg:justify-start lg:items-center lg:gap-2">
+                  <input type="radio" />
+                  <label class="lg:text-xs lg:font-normal">Brand (a - z)</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- End on larger device -->
+        </section>
+        <!-- End Filters -->
+        <!-- Collections products -->
+        <div>
+          <!-- Filter block -->
+          <div></div>
+          <!-- End Filter block -->
+          <!-- Products -->
+          <div>
+            <!-- Product card -->
+            <div>
+              <div>
+                <img src="./src/images/shoes5.jpg" alt="" />
+              </div>
+              <div>
+                <span>Back in Stock</span>
+              </div>
+              <div>
+                <h4>adidas</h4>
+                <p>Samba OG Trainers</p>
+                <p>Leopard Preloved Red Cream</p>
+                <div>
+                  <p class="text-red-600">$100.00</p>
+                  <p class="text-gray-600">$100.00</p>
+                  <p class="text-green-700">Save 35%</p>
+                </div>
+              </div>
+              <div>
+                <span>Free delivery</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <!-- End Products -->
+        </div>
+        <!-- View number of products -->
+        <div>
+          <span>Viewed 60 of 1000 products</span>
+        </div>
+        <!-- End View number of products -->
+        <!-- Load more products -->
+        <div>
+          <button>Load more products</button>
+          <a href="#">View all products</a>
+        </div>
+        <!-- End Load more products -->
+        <!-- End Collections products -->
+      </div>
+    </section>
+    <!-- End Text and Description -->
+    <!--  -->
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- End Footer -->
+
+    <script type="module" src="./js/collection.js"></script>
+  </body>
+</html>

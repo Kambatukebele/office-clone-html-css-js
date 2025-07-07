@@ -1,0 +1,230 @@
+<!-- Header -->
+<header class="w-full h-fit border-b border-b-gray-200 relative">
+  <nav class="container mx-auto h-[60px] flex justify-between items-center">
+    <!-- Menu -->
+    <ul class="hidden xl:flex xl:justify-center xl:items-center xl:gap-6">
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">New in</a>
+      </li>
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">Woman</a>
+      </li>
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">Men</a>
+      </li>
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">Trainers</a>
+      </li>
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">Kids</a>
+      </li>
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">Accessories</a>
+      </li>
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">Brands</a>
+      </li>
+      <li class="hidden xl:block xl:text-xs xl:font-medium xl:uppercase">
+        <a href="#">Sale</a>
+      </li>
+    </ul>
+    <!-- End Menu -->
+    <!-- Logo -->
+    <div class="block">
+      <a class="block w-28 sm:w-36 lg:w-44 xl:w-52" href="#">
+        <img
+          class="block w-full h-full object-center object-cover"
+          src="./src/images/logo.png"
+          alt="Logo Image"
+        />
+      </a>
+    </div>
+    <!-- End Logo -->
+    <!-- Search and Icons -->
+    <div class="flex justify-center items-center gap-6">
+      <!-- Search -->
+      <div class="hidden sm:w-2xs sm:block sm:border-b sm:border-b-gray-200">
+        <div
+          class="hidden sm:h-[40px] sm:flex sm:justify-center sm:items-center sm:gap-2"
+        >
+          <span class="hidden sm:block">
+            <img
+              class="hidden sm:block sm:w-5 sm:h-5"
+              src="./src/svgs/search.svg"
+              alt="search icon"
+            />
+          </span>
+          <span class="hidden sm:block">
+            <input
+              class="hidden sm:block sm:text-xs sm:h-[40px] sm:border-none sm:outline-none sm:bg-transparent"
+              type="search"
+              placeholder="Search for products and brands..."
+            />
+          </span>
+        </div>
+      </div>
+      <!-- End Search -->
+      <!-- Icons -->
+      <div class="flex w-20 justify-between items-center sm:w-32">
+        <!-- User icon -->
+        <div class="hidden xl:block xl:relative">
+          <span class="hidden sm:block sm:cursor-pointer userIcon">
+            <img
+              class="sm:w-7 sm:h-7"
+              src="./src/svgs/user.svg"
+              alt="user icon"
+            />
+          </span>
+          <div
+            class="hidden userBlock xl:block xl:bg-white xl:border border-gray-200 rounded-sm shadow-lg xl:w-80 xl:p-5 xl:absolute xl:top-40 xl:-right-8 xl:opacity-0 xl:duration-300 xl:ease-in-out xl:z-40"
+          >
+            <div
+              class="xl:flex xl:flex-col xl:justify-center xl:items-center xl:gap-2"
+            >
+              <h6 class="xl:text-base xl:font-medium xl:text-center">
+                Your account
+              </h6>
+              <p class="xl:text-sm xl:text-center">
+                Login if you are an existing Angeldren customer or register to
+                make ordering simple
+              </p>
+              <a
+                href="#"
+                class="xl:text-sm xl:text-center xl:bg-blue-700 xl:rounded-sm xl:px-6 xl:py-3 xl:text-white block"
+                >Login/Register</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- heart  -->
+        <span>
+          <img class="w-7 h-7" src="./src/svgs/heart.svg" alt="heart icon" />
+        </span>
+        <!-- bag  -->
+        <span>
+          <img class="w-7 h-7" src="./src/svgs/bag.svg" alt="bag icon" />
+        </span>
+      </div>
+      <!-- End Icons -->
+      <!-- Hamburger icon -->
+      <div class="block cursor-pointer xl:hidden">
+        <span class="block w-7 h-7 hamburger">
+          <img
+            class="block w-7 h-7"
+            src="./src/svgs/hamburger.svg"
+            alt="menu icon"
+          />
+        </span>
+      </div>
+      <!-- End Hamburger icon -->
+    </div>
+    <!-- End Search and Icons -->
+  </nav>
+  <!-------------------------- Menu navigation on small device --------------------------->
+  <div
+    class="h-screen bg-white z-10 w-full absolute top-0 -right-0 translate-x-[1300px] opacity-0 duration-300 ease-in-out flex-col justify-between mobileMenu xl:hidden"
+  >
+    <!-- Head -->
+    <div class="px-4 h-[8rem]">
+      <!-- Logo and close icon -->
+      <div
+        class="flex justify-between items-center h-16 border-b border-gray-100"
+      >
+        <!-- Logo -->
+        <div class="w-28 sm:w-36 lg:w-44">
+          <img
+            class="block w-full h-full object-center object-cover"
+            src="./src/images/logo.png"
+            alt="Logo Image"
+          />
+        </div>
+        <!-- End Logo -->
+        <!-- close icon -->
+        <span class="block w-7 h-7 cursor-pointer closeHamburger">
+          <img class="w-7 h-7" src="./src/svgs/close.svg" alt="close icon" />
+        </span>
+        <!-- End close icon -->
+      </div>
+      <!-- End Logo and close icon -->
+      <!-- Search -->
+      <div class="flex justify-start h-16 items-center gap-2">
+        <span
+          class="border bg-gray-200 border-gray-50 w-10 h-10 flex justify-center items-center"
+        >
+          <img class="w-5 h-5" src="./src/svgs/search.svg" alt="search icon" />
+        </span>
+        <span class="block">
+          <input
+            class="text-xs h-12 border-none outline-none bg-transparent sm:text-sm"
+            type="search"
+            placeholder="Search for products and brands..."
+          />
+        </span>
+      </div>
+      <!-- End Search -->
+    </div>
+    <!-- End Head -->
+    <!-- Body menu -->
+    <ul
+      class="mobileMenuUl block px-4 h-[calc(100vh-18.625rem)] overflow-y-scroll"
+    >
+      <!-- <li
+            class="flex justify-between items-center h-[4.375rem] border-b border-gray-200"
+          >
+            <span class="text-base block font-medium uppercase">New in</span>
+            <span class="block">
+              <img
+                class="w-11 h-11"
+                src="./src/svgs/chevron-right.svg"
+                alt="Chevron right icon"
+              />
+            </span>
+          </li> -->
+    </ul>
+    <!-- End Body menu -->
+    <!-- Foot -->
+    <div class="bg-gray-100 px-4 py-5 h-[10.625rem]">
+      <!-- Account -->
+      <div class="flex justify-start items-center gap-5">
+        <span class="block">
+          <img
+            class="w-7 h-7"
+            src="./src/svgs/user.svg"
+            alt="user logo account"
+          />
+        </span>
+        <span class="block">
+          <h6 class="text-lg font-semibold uppercase">Account</h6>
+        </span>
+      </div>
+      <!-- End Account -->
+    </div>
+    <!-- End Foot -->
+  </div>
+  <!---------------------- End Menu navigation on small device -------------------------->
+  <!-------------------------- SubMenuComponent --------------------------->
+  <div
+    class="subMenuComponentClass z-10 w-full absolute top-0 -right-0 translate-x-[1300px] opacity-0 duration-500 ease-in-out"
+  ></div>
+  <!-------------------------- SubMenuComponent --------------------------->
+</header>
+<!-- End Header -->
+<!-- Announcement bar -->
+<section class="bg-pink-200 w-full px-4">
+  <div
+    class="container flex justify-center items-center h-10 lg:justify-between"
+  >
+    <a href="#" class="announcement block font-medium text-sm"
+      >10% Student Discount</a
+    >
+    <a href="#" class="announcement hidden font-medium text-sm lg:block"
+      >Shop New in</a
+    >
+    <a href="#" class="announcement hidden font-medium text-sm lg:block"
+      >Free Delivery over $100</a
+    >
+    <a href="#" class="announcement hidden font-medium text-sm lg:block"
+      >Store locator</a
+    >
+  </div>
+</section>

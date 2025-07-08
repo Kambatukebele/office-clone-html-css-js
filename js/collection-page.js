@@ -5,7 +5,7 @@ export default function collectionPage() {
    */
   sortbyLargeScreen();
   function sortbyLargeScreen() {
-    const sortBy = document.querySelector("#sort-by");
+    const sortBy = document.querySelector("#sortByLargeScreen");
     sortBy.addEventListener("click", (e) => {
       e.preventDefault();
       if (
@@ -60,7 +60,7 @@ export default function collectionPage() {
   }
 
   /**
-   * filterSmall()()
+   * filterSmall()
    * This function shows and hide filter on small screen from 320px t0 1023px
    */
   filterSmall();
@@ -115,5 +115,125 @@ export default function collectionPage() {
       });
     }
     toggleFilterOnSmall();
+  }
+
+  /**
+   * filterLargeScreen()
+   * This function shows and hide filter block on larger screen from 1024px to up
+   */
+  filterLargeScreen();
+  function filterLargeScreen() {
+    const showFilters = document.querySelector("#filterLargeScreen");
+    const filterBlock = document.querySelector("#filterBlock");
+    const productsBlock = document.querySelector("#productsBlock");
+
+    //Open and close filter block
+    showFilters.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // on click it open and close the filter block
+      if (
+        filterBlock.classList.contains("lg:w-0") &&
+        filterBlock.classList.contains("lg:px-0") &&
+        filterBlock.classList.contains("lg:overflow-hidden") &&
+        filterBlock.classList.contains("lg:opacity-0") &&
+        productsBlock.classList.contains("lg:w-full")
+      ) {
+        filterBlock.classList.replace("lg:w-0", "lg:w-1/5");
+        filterBlock.classList.replace("lg:px-0", "lg:px-4");
+        filterBlock.classList.replace(
+          "lg:overflow-hidden",
+          "lg:overflow-visible"
+        );
+        filterBlock.classList.replace("lg:opacity-0", "lg:opacity-100");
+
+        //Change the width of the products block on click
+        productsBlock.classList.replace("lg:w-full", "lg:w-4/5");
+
+        //Rotate the show filter icon from lg:rotate-0 to lg:rotate-90
+        e.currentTarget.children[0].classList.replace(
+          "lg:rotate-0",
+          "lg:rotate-90"
+        );
+
+        // Change the name from show filter to hide filter
+        e.currentTarget.children[1].innerHTML = "Hide filters";
+      } else {
+        filterBlock.classList.replace("lg:w-1/5", "lg:w-0");
+        filterBlock.classList.replace("lg:px-4", "lg:px-0");
+        filterBlock.classList.replace(
+          "lg:overflow-visible",
+          "lg:overflow-hidden"
+        );
+        filterBlock.classList.replace("lg:opacity-100", "lg:opacity-0");
+
+        //Change the width of the products block on click
+        productsBlock.classList.replace("lg:w-4/5", "lg:w-full");
+
+        //Rotate the show filter icon from lg:rotate-90 to lg:rotate-0
+        e.currentTarget.children[0].classList.replace(
+          "lg:rotate-90",
+          "lg:rotate-0"
+        );
+
+        // Change the name from hide filter to show filter
+        e.currentTarget.children[1].innerHTML = "Show filters";
+      }
+      openCloseBodyFilterLarge();
+      function openCloseBodyFilterLarge() {
+        const filterMenus = document.querySelectorAll(".filterMenu");
+
+        filterMenus.forEach((filterMenu, index) => {
+          filterMenu.addEventListener("click", (event) => {
+            event.preventDefault();
+            // console.log(
+            //   event.currentTarget.children[0].children[0].children[0].classList.contains(
+            //     "lg:block"
+            //   )
+            // );
+            // console.log(
+            //   event.currentTarget.children[1].classList.contains("lg:hidden")
+            // );
+
+            if (
+              event.currentTarget.children[0].children[0].children[0].classList.contains(
+                "lg:block"
+              ) &&
+              event.currentTarget.children[1].classList.contains("lg:hidden")
+            ) {
+              // Turn plus to minus
+              event.currentTarget.children[0].children[0].children[0].classList.replace(
+                "lg:block",
+                "lg:hidden"
+              );
+              event.currentTarget.children[0].children[0].children[1].classList.replace(
+                "lg:hidden",
+                "lg:block"
+              );
+              // Open the filter menu
+              event.currentTarget.children[1].classList.replace(
+                "lg:hidden",
+                "lg:flex"
+              );
+            } else {
+              // Turn plus to minus
+              event.currentTarget.children[0].children[0].children[0].classList.replace(
+                "lg:hidden",
+                "lg:block"
+              );
+              event.currentTarget.children[0].children[0].children[1].classList.replace(
+                "lg:block",
+                "lg:hidden"
+              );
+              // Open the filter menu
+              event.currentTarget.children[1].classList.replace(
+                "lg:flex",
+                "lg:hidden"
+              );
+            }
+          });
+        });
+      }
+    });
   }
 }

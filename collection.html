@@ -35,7 +35,8 @@
     <!-- End Announcement-image -->
     <!-- Text and Description -->
     <section class="w-full">
-      <div class="container mx-auto">
+      <div id="" class="container mx-auto">
+        <!-- Texts block -->
         <div
           class="w-full flex flex-col justify-center items-center gap-4 py-10"
         >
@@ -72,7 +73,7 @@
           </div>
         </div>
         <!-- Filters -->
-        <section class="py-5 w-full">
+        <div class="py-5 w-full">
           <!-- on small device -->
           <div class="w-full flex justify-between items-center py-10 lg:hidden">
             <div class="w-full">
@@ -220,7 +221,7 @@
                         >
                           <input type="radio" name="shoe-type" id="" />
                           <label
-                            class="text-xs font-normal text-gray-800"
+                            class="lg:text-xs lg:font-normal lg:text-gray-800"
                             for=""
                             >Shoe type</label
                           >
@@ -909,16 +910,25 @@
           <div
             class="hidden lg:flex lg:justify-between lg:items-center lg:gap-4"
           >
-            <div class="lg:w-full lg:flex lg:justify-start lg:items-center">
-              <span class="lg:w-4 lg:h-4 lg:block">
+            <!-- Show filters on large screen -->
+            <div
+              id="filterLargeScreen"
+              class="lg:w-full lg:flex lg:justify-start lg:items-center"
+            >
+              <span
+                class="lg:w-4 lg:h-4 lg:block lg:rotate-0 lg:duration-500 lg:ease-in-out"
+              >
                 <img
                   class="lg:w-full lg:h-full lg:object-center lg:object-cover lg:block"
                   src="./src/svgs/chevron-right.svg"
                   alt="chevron-right"
                 />
               </span>
-              <span class="lg:text-xs lg:font-medium">Show filters</span>
+              <span class="lg:text-xs lg:font-medium lg:cursor-pointer"
+                >Show filters</span
+              >
             </div>
+            <!-- Breadcrumb -->
             <div
               class="lg:w-full lg:flex lg:justify-center lg:items-center lg:gap-2"
             >
@@ -930,8 +940,8 @@
                 >Festival Shoes</a
               >
             </div>
-            <!-- Sort by -->
-            <div id="sort-by" class="lg:w-full lg:relative">
+            <!-- Sort by on large screen -->
+            <div id="sortByLargeScreen" class="lg:w-full lg:relative">
               <div class="lg:w-full lg:flex lg:justify-end lg:items-center">
                 <span
                   class="lg:w-4 lg:h-4 lg:block lg:rotate-0 lg:duration-500 lg:ease-in-out lg:transition-transform"
@@ -942,7 +952,7 @@
                     alt="chevron-right"
                   />
                 </span>
-                <span class="lg:text-xs lg:font-medium"
+                <span class="lg:text-xs lg:font-medium lg:cursor-pointer"
                   >Sort by: Recommended</span
                 >
               </div>
@@ -978,15 +988,745 @@
             </div>
           </div>
           <!-- End on larger device -->
-        </section>
+        </div>
         <!-- End Filters -->
         <!-- Collections products -->
-        <div>
-          <!-- Filter block -->
-          <div></div>
-          <!-- End Filter block -->
+        <div class="hidden lg:flex">
+          <!-- Show Filter block -->
+          <div
+            id="filterBlock"
+            class="hidden lg:block lg:w-0 lg:px-0 lg:overflow-hidden lg:opacity-0 lg:duration-700 lg:ease-in-out lg:transition-discrete"
+          >
+            <!-- Show filter head -->
+            <div
+              class="lg:w-full lg:flex lg:justify-between lg:items-center lg:mb-5"
+            >
+              <span class="lg:text-xs lg:font-light lg:text-gray-800"
+                >287 items</span
+              >
+              <span
+                class="lg:text-xs lg:font-normal lg:text-gray-800 lg:underline lg:cursor-pointer"
+                >Clear all</span
+              >
+            </div>
+            <!-- Show filter body -->
+            <div class="lg:mt-5 lg:flex lg:flex-col lg:gap-4">
+              <!-- Show filter card -->
+              <div class="filterMenu cursor-pointer">
+                <div
+                  class="hidden lg:w-full lg:flex lg:justify-start lg:items-center gap-2 lg:py-2"
+                >
+                  <div class="hidden lg:block lg:w-fit">
+                    <span class="hidden lg:w-4 lg:h-4 lg:block">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/plus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                    <span class="lg:w-4 lg:h-4 lg:hidden">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/minus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="hidden lg:text-xs lg:font-medium lg:block lg:text-gray-950"
+                    >Shoe type</span
+                  >
+                </div>
+                <!-- Body filter card -->
+                <div
+                  class="lg:w-full lg:flex-col lg:justify-center lg:items-center lg:h-fit lg:my-2 lg:px-4 lg:hidden"
+                >
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="filterMenu cursor-pointer">
+                <div
+                  class="hidden lg:w-full lg:flex lg:justify-start lg:items-center gap-2 lg:py-2"
+                >
+                  <div class="hidden lg:block lg:w-fit">
+                    <span class="hidden lg:w-4 lg:h-4 lg:block">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/plus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                    <span class="lg:w-4 lg:h-4 lg:hidden">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/minus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="hidden lg:text-xs lg:font-medium lg:block lg:text-gray-950"
+                    >Shoe type</span
+                  >
+                </div>
+                <!-- Body filter card -->
+                <div
+                  class="lg:w-full lg:flex-col lg:justify-center lg:items-center lg:h-fit lg:my-2 lg:px-4 lg:hidden"
+                >
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="filterMenu cursor-pointer">
+                <div
+                  class="hidden lg:w-full lg:flex lg:justify-start lg:items-center gap-2 lg:py-2"
+                >
+                  <div class="hidden lg:block lg:w-fit">
+                    <span class="hidden lg:w-4 lg:h-4 lg:block">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/plus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                    <span class="lg:w-4 lg:h-4 lg:hidden">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/minus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="hidden lg:text-xs lg:font-medium lg:block lg:text-gray-950"
+                    >Shoe type</span
+                  >
+                </div>
+                <!-- Body filter card -->
+                <div
+                  class="lg:w-full lg:flex-col lg:justify-center lg:items-center lg:h-fit lg:my-2 lg:px-4 lg:hidden"
+                >
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="filterMenu cursor-pointer">
+                <div
+                  class="hidden lg:w-full lg:flex lg:justify-start lg:items-center gap-2 lg:py-2"
+                >
+                  <div class="hidden lg:block lg:w-fit">
+                    <span class="hidden lg:w-4 lg:h-4 lg:block">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/plus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                    <span class="lg:w-4 lg:h-4 lg:hidden">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/minus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="hidden lg:text-xs lg:font-medium lg:block lg:text-gray-950"
+                    >Shoe type</span
+                  >
+                </div>
+                <!-- Body filter card -->
+                <div
+                  class="lg:w-full lg:flex-col lg:justify-center lg:items-center lg:h-fit lg:my-2 lg:px-4 lg:hidden"
+                >
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="filterMenu cursor-pointer">
+                <div
+                  class="hidden lg:w-full lg:flex lg:justify-start lg:items-center gap-2 lg:py-2"
+                >
+                  <div class="hidden lg:block lg:w-fit">
+                    <span class="hidden lg:w-4 lg:h-4 lg:block">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/plus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                    <span class="lg:w-4 lg:h-4 lg:hidden">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/minus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="hidden lg:text-xs lg:font-medium lg:block lg:text-gray-950"
+                    >Shoe type</span
+                  >
+                </div>
+                <!-- Body filter card -->
+                <div
+                  class="lg:w-full lg:flex-col lg:justify-center lg:items-center lg:h-fit lg:my-2 lg:px-4 lg:hidden"
+                >
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="filterMenu cursor-pointer">
+                <div
+                  class="hidden lg:w-full lg:flex lg:justify-start lg:items-center gap-2 lg:py-2"
+                >
+                  <div class="hidden lg:block lg:w-fit">
+                    <span class="hidden lg:w-4 lg:h-4 lg:block">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/plus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                    <span class="lg:w-4 lg:h-4 lg:hidden">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/minus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="hidden lg:text-xs lg:font-medium lg:block lg:text-gray-950"
+                    >Shoe type</span
+                  >
+                </div>
+                <!-- Body filter card -->
+                <div
+                  class="lg:w-full lg:flex-col lg:justify-center lg:items-center lg:h-fit lg:my-2 lg:px-4 lg:hidden"
+                >
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="filterMenu cursor-pointer">
+                <div
+                  class="hidden lg:w-full lg:flex lg:justify-start lg:items-center gap-2 lg:py-2"
+                >
+                  <div class="hidden lg:block lg:w-fit">
+                    <span class="hidden lg:w-4 lg:h-4 lg:block">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/plus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                    <span class="lg:w-4 lg:h-4 lg:hidden">
+                      <img
+                        class="lg:w-full lg:h-full lg:object-cover lg:object-center lg:block lg:overflow-hidden"
+                        src="./src/svgs/minus.svg"
+                        alt="plus icon"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    class="hidden lg:text-xs lg:font-medium lg:block lg:text-gray-950"
+                    >Shoe type</span
+                  >
+                </div>
+                <!-- Body filter card -->
+                <div
+                  class="lg:w-full lg:flex-col lg:justify-center lg:items-center lg:h-fit lg:my-2 lg:px-4 lg:hidden"
+                >
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                  <span
+                    class="lg:w-full lg:flex lg:justify-start lg:items-center lg:gap-4 mb-3"
+                  >
+                    <input type="radio" name="shoe-type" id="" />
+                    <label
+                      class="lg:text-xs lg:font-normal lg:text-gray-800"
+                      for=""
+                      >Shoe type</label
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Show Filter block -->
           <!-- Products -->
-          <div>
+          <div
+            id="productsBlock"
+            class="hidden lg:block lg:w-full lg:duration-700 lg:ease-in-out lg:transition-discrete"
+          >
             <!-- Product card -->
             <div>
               <div>

@@ -325,16 +325,16 @@ export default function handleHeader() {
   //call back function for the toggleMenu
   function cb() {
     if (
-      mobileMenu.classList.contains("translate-x-[1300px]") &&
+      mobileMenu.classList.contains("translate-x-full") &&
       mobileMenu.classList.contains("opacity-0")
     ) {
-      mobileMenu.classList.replace("translate-x-[1300px]", "translate-x-0");
+      mobileMenu.classList.replace("translate-x-full", "translate-x-0");
       mobileMenu.classList.replace("opacity-0", "opacity-100");
     } else if (
       mobileMenu.classList.contains("translate-x-0") &&
       mobileMenu.classList.contains("opacity-100")
     ) {
-      mobileMenu.classList.replace("translate-x-0", "translate-x-[1300px]");
+      mobileMenu.classList.replace("translate-x-0", "translate-x-full");
       mobileMenu.classList.replace("opacity-100", "opacity-0");
     }
   }
@@ -377,7 +377,7 @@ export default function handleHeader() {
       );
 
       subMenuComponentClass.classList.replace(
-        "translate-x-[1300px]",
+        "translate-x-full",
         "translate-x-0"
       );
       subMenuComponentClass.classList.replace("opacity-0", "opacity-100");
